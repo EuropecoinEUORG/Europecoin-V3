@@ -1,4 +1,4 @@
-#*Europecoin Version 3** 
+#*Europecoin Version 3* 
 
 <img src="https://altcoinspekulant.files.wordpress.com/2016/02/fm3m0zw.png?w=604&h=147" width="400">
 
