@@ -569,7 +569,7 @@ void static BitcoinMiner(CWallet *pwallet, int nThreads)
                     dHashesPerSec = (time(NULL) != startTime ? totalHashes / (time(NULL) - startTime) : 0);
                     LogPrintf("EuropeCoinMiner:\n");
                     LogPrintf("search finished - best hash  \n  hash: %s collisions:%d gethash:%s ba:%d bb:%d nonce:%d \ntarget: %s\n", hash.GetHex(), collisions, pblock->GetHash().GetHex(), pblock->nStartLocation, pblock->nFinalCalculation, pblock->nNonce, hashTarget.GetHex());
-                    LogPrintf("Hashes Per Second=%d (total seconds=%d hashes=%d)\n",dHashesPerSec,((time(NULL)-startTime)),totalHashes);
+                    LogPrintf("h/s =%d (total seconds=%d hashes=%d)\n",dHashesPerSec,((time(NULL)-startTime)),totalHashes);
                     if (UintToArith256(hash) <= hashTarget){
                         assert(hash == pblock->GetHash());
                         SetThreadPriority(THREAD_PRIORITY_NORMAL);
