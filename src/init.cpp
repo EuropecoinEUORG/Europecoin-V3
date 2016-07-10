@@ -955,7 +955,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
     string rateData=initRateTable();
     const std::vector<unsigned char> data2(rateData.begin(), rateData.end());
     int rateDataHash=MurmurHash3(1989,data2);
-    LogPrintf("Rate Data Hash=%d\n",rateDataHash);
+    //LogPrintf("Rate Data Hash=%d\n",rateDataHash);
     assert(rateDataHash==-1658088081);
 
     CAmount principal=100*COIN;
@@ -979,8 +979,8 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
     const std::vector<unsigned char> data(interestRateTable.begin(), interestRateTable.end());
     int rateTableHash=MurmurHash3(1989,data);
     assert(rateTableHash==1189675776);
-    LogPrintf("Rate Table Hash=%d\n",rateTableHash);
-	LogPrintf("String=%s\n",ss.str());
+    //LogPrintf("Rate Table Hash=%d\n",rateTableHash);
+	//LogPrintf("String=%s\n",ss.str());
 
 
     int64_t nStart;

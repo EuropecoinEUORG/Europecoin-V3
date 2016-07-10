@@ -1,8 +1,8 @@
-#*Europecoin Version 3** 
+#*Europecoin Version 3* 
 
 <img src="https://altcoinspekulant.files.wordpress.com/2016/02/fm3m0zw.png?w=604&h=147" width="400">
 
-[http://http://europecoin.eu.org](http://http://europecoin.eu.org)
+[http://europecoin.eu.org](http://europecoin.eu.org)
 ###**What is it?**
 
 **EuropeCoin** is a Cryptocurrency just like Bitcoin, but with one major difference. It pays interest on every balance. 
