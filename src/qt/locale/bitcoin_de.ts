@@ -1788,7 +1788,7 @@
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translatiEuropeCoin überweisen</translation>
+        <translation>EuropeCoin überweisen</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
