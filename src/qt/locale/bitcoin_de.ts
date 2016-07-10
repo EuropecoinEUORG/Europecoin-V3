@@ -2142,7 +2142,7 @@
     <name>ShutdownWindow</name>
     <message>
         <source>Bitcoin Core is shutting down...</source>
-        <translatiEuropeCoinoin Core wird beendet...</translation>
+       <translation>Europecoin Core wird beendet...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
