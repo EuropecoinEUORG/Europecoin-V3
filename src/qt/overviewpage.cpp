@@ -221,7 +221,7 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
         struct tm * timeinfo;
         char buffer[80];
         time (&rawtime);
-        rawtime+=blocksRemaining*154;
+        rawtime+=blocksRemaining*288; //154
         timeinfo = localtime(&rawtime);
         strftime(buffer,80,"%d/%m/%Y",timeinfo);
         std::string str(buffer);
