@@ -205,7 +205,7 @@ BitcoinGUI::BitcoinGUI(const NetworkStyle *networkStyle, QWidget *parent) :
     frameBlocksLayout->addStretch();
     
     // Set mining pixmap
-    labelMiningIcon->setPixmap(QIcon(":/icons/transaction_conflicted").pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE));
+    labelMiningIcon->setPixmap(QIcon(":/icons/empty").pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE));
     QTimer *timerMiningIcon = new QTimer(labelMiningIcon);
     timerMiningIcon->start(MODEL_UPDATE_DELAY);
     connect(timerMiningIcon, SIGNAL(timeout()), this, SLOT(updateMiningIcon()));
@@ -846,7 +846,7 @@ void BitcoinGUI::setMining(bool mining, double hashrate, int miners, int threads
     }
     else
     {
-        labelMiningIcon->setPixmap(QIcon(":/icons/transaction_conflicted").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
+        labelMiningIcon->setPixmap(QIcon(":/icons/empty").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
         labelMiningIcon->setToolTip(tr("Not mining."));
     }
 }
