@@ -41,7 +41,7 @@ Next you will enter the **Amount** you want to earn interest on, also how long y
 >***Note** 1 Block is 154 seconds
 
 Next
->**Click the "ERC" button**
+>**Click the "ERC3" button**
 
 <img src="http://i.imgur.com/tSMl1QZ.png" width="170">
 

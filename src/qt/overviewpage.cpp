@@ -26,7 +26,7 @@ class TxViewDelegate : public QAbstractItemDelegate
 {
     Q_OBJECT
 public:
-    TxViewDelegate(): QAbstractItemDelegate(), unit(BitcoinUnits::ERC)
+    TxViewDelegate(): QAbstractItemDelegate(), unit(BitcoinUnits::ERC3)
     {
 
     }
@@ -183,7 +183,7 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     //ui->hodlTable->setColumnCount(12);
 
     // actually update labels
-    int nDisplayUnit = BitcoinUnits::ERC;
+    int nDisplayUnit = BitcoinUnits::ERC3;
     //if (model && model->getOptionsModel())
     //    nDisplayUnit = model->getOptionsModel()->getDisplayUnit();
 
@@ -286,7 +286,7 @@ void OverviewPage::setWalletModel(WalletModel *model)
         connect(model, SIGNAL(notifyWatchonlyChanged(bool)), this, SLOT(updateWatchOnlyLabels(bool)));
     }
 
-    // update the display unit, to not use the default ("ERC")
+    // update the display unit, to not use the default ("ERC3")
     updateDisplayUnit();
 }
 

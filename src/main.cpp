@@ -1242,7 +1242,7 @@ bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex)
 
 CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 {
-	// OLD ERC 95.410.341 + 2 Month Stake 8% = 0.67 % = 96.049.590 / 10
+	// OLD ERC3 95.410.341 + 2 Month Stake 8% = 0.67 % = 96.049.590 / 10
     if(nHeight == 1) return 9604959 * COIN;
     
 	CAmount nSubsidy = 1 * COIN;
