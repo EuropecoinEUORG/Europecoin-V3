@@ -13,7 +13,7 @@
 #include <math.h>
 
 unsigned int static DUAL_KGW3(const CBlockIndex* pindexLast, const Consensus::Params& params, const CBlockHeader *pblock) {
-	// current difficulty formula, ERC33 - DUAL_KGW3, written by Christian Knoepke - apfelbaum@email.de
+	// current difficulty formula, ERC3 - DUAL_KGW3, written by Christian Knoepke - apfelbaum@email.de
 	// BitSend and Eropecoin Developer
     const CBlockIndex *BlockLastSolved = pindexLast;
     const CBlockIndex *BlockReading = pindexLast;

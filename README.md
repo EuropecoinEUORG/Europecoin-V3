@@ -54,10 +54,10 @@ Its lightening fast, precise like clockwork, rock stable but dynamic.
  - Max TX is 250 KB ( ~ 1500 TXs)
  - COINBASE_MATURITY = 288;
  - 300 second blocks
- - 1 ERC3 subsidy per block 
- - Total of 32,400,000 ERC3 will be mined
- - This Core is a swapp from the Old core. 9.604.959 ERC3 Premine.
- - OLD ERC3 95.410.341 (07-09-2016) + 2 Month Stake 8% = 0.67 % = 96.049.590 / 10 (09-09-2016)
+ - 1 ERC subsidy per block 
+ - Total of 32,400,000 ERC will be mined
+ - This Core is a swapp from the Old core. 9.604.959 ERC Premine.
+ - OLD ERC 95.410.341 (07-09-2016) + 2 Month Stake 8% = 0.67 % = 96.049.590 / 10 (09-09-2016)
  - Standard interest payment 2,43% on **all** outputs for up to 30 days
 
 ###**Term deposits**

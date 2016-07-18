@@ -56,9 +56,9 @@ public:
      */
     enum Unit
     {
-        ERC3,
-        mERC3,
-        uERC3
+        ERC,
+        mERC,
+        uERC
     };
 
     enum SeparatorStyle
