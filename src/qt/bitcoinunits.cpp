@@ -17,9 +17,9 @@ BitcoinUnits::BitcoinUnits(QObject *parent):
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(ERC3);
-    unitlist.append(mERC3);
-    unitlist.append(uERC3);
+    unitlist.append(ERC);
+    unitlist.append(mERC);
+    unitlist.append(uERC);
     return unitlist;
 }
 
@@ -27,9 +27,9 @@ bool BitcoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case ERC3:
-    case mERC3:
-    case uERC3:
+    case ERC:
+    case mERC:
+    case uERC:
         return true;
     default:
         return false;
@@ -40,9 +40,9 @@ QString BitcoinUnits::name(int unit)
 {
     switch(unit)
     {
-    case ERC3: return QString("ERC3");
-    case mERC3: return QString("mERC3");
-    case uERC3: return QString::fromUtf8("μERC3");
+    case ERC: return QString("ERC");
+    case mERC: return QString("mERC");
+    case uERC: return QString::fromUtf8("μERC");
     default: return QString("???");
     }
 }
@@ -51,9 +51,9 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case ERC3: return QString("Europecoins");
-    case mERC3: return QString("Milli-Europecoins (1 / 1" THIN_SP_UTF8 "000)");
-    case uERC3: return QString("Micro-Europecoins (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case ERC: return QString("Europecoins");
+    case mERC: return QString("Milli-Europecoins (1 / 1" THIN_SP_UTF8 "000)");
+    case uERC: return QString("Micro-Europecoins (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }
@@ -62,9 +62,9 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case ERC3:  return 100000000;
-    case mERC3: return 100000;
-    case uERC3: return 100;
+    case ERC:  return 100000000;
+    case mERC: return 100000;
+    case uERC: return 100;
     default:   return 100000000;
     }
 }
@@ -73,9 +73,9 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case ERC3: return 8;
-    case mERC3: return 5;
-    case uERC3: return 2;
+    case ERC: return 8;
+    case mERC: return 5;
+    case uERC: return 2;
     default: return 0;
     }
 }

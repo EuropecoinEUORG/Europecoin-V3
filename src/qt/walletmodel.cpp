@@ -264,11 +264,11 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
                     ss <<"!!!!!WARNING: There is no interest rate advantage of using a Term Deposit for a period of more than 102,382 blocks. It is recommended that you cancel this transaction. ";
                 }
                 ss <<"Term Deposit Instruction Detected: ";
-                ss <<"This will send the amount of " << (0.0+rcp.amount)/COIN <<" ERC3 ";
+                ss <<"This will send the amount of " << (0.0+rcp.amount)/COIN <<" ERC ";
                 ss <<"to be locked for " << termDepositLength << " blocks. ";
                 ss <<"This is approximately " << (0.0+termDepositLength)/(288) << " days. ";
                 CAmount withInterest=GetInterest(rcp.amount, chainActive.Height()+1, chainActive.Height()+1+termDepositLength, chainActive.Height()+1+termDepositLength);
-                ss <<"Upon maturation, it will be worth " << (0.0+withInterest)/COIN << " ERC3. ";
+                ss <<"Upon maturation, it will be worth " << (0.0+withInterest)/COIN << " ERC. ";
                 CAmount interestOnly=withInterest-rcp.amount;
                 double interestRateForTime=(0.0+interestOnly)/(rcp.amount);
                 double fractionOfaYear=102382.5/termDepositLength;
