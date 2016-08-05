@@ -121,8 +121,21 @@ public:
 
 
         vSeeds.push_back(CDNSSeedData("85.214.68.75", "85.214.68.75"));
-        vSeeds.push_back(CDNSSeedData("", ""));//East Coast
-
+        vSeeds.push_back(CDNSSeedData("37.120.190", "37.120.190"));//East Coast
+		vSeeds.push_back(CDNSSeedData("46.105.114.185", "46.105.114.185"));
+		vSeeds.push_back(CDNSSeedData("144.76.238.2", "144.76.238.2"));
+		vSeeds.push_back(CDNSSeedData("104.172.24.79", "104.172.24.79"));
+		vSeeds.push_back(CDNSSeedData("58.153.14.115", "58.153.14.115"));
+		vSeeds.push_back(CDNSSeedData("104.232.37.138", "104.232.37.138"));
+		vSeeds.push_back(CDNSSeedData("216.170.126.168", "216.170.126.168"));
+		vSeeds.push_back(CDNSSeedData("79.132.111.195", "79.132.111.195"));
+		vSeeds.push_back(CDNSSeedData("189.131.233.149", "189.131.233.149"));
+		vSeeds.push_back(CDNSSeedData("115.187.185.121", "115.187.185.121"));
+		vSeeds.push_back(CDNSSeedData("167.114.249.196", "167.114.249.196"));
+		vSeeds.push_back(CDNSSeedData("86.219.30.13", "86.219.30.13"));
+		vSeeds.push_back(CDNSSeedData("95.104.192.198", "95.104.192.198"));
+		
+		
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,33);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,40+128);
@@ -149,9 +162,10 @@ public:
 
         checkpointData = (Checkpoints::CCheckpointData) {
             boost::assign::map_list_of
-            ( 0, uint256S("0x000d0da26987ead011c5d568e627f7e3d4a4f83a0b280b1134d8e7e366377f9a")),
-            1454805021, // * UNIX timestamp of last checkpoint block
-            3238,   // * total number of transactions between genesis and last checkpoint
+            ( 0, uint256S("0x000d0da26987ead011c5d568e627f7e3d4a4f83a0b280b1134d8e7e366377f9a"))
+			( 7614, uint256S("0x0000004eb7ffab1324ac772ee5b70b86d32375c0ad309ed315283404f50a9a49")),
+            1470422069, // * UNIX timestamp of last checkpoint block
+            8136,   // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
             1000.0     // * estimated number of transactions per day after checkpoint
         };
