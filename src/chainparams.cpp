@@ -121,7 +121,7 @@ public:
 
 
         vSeeds.push_back(CDNSSeedData("85.214.68.75", "85.214.68.75"));
-        vSeeds.push_back(CDNSSeedData("37.120.190", "37.120.190"));//East Coast
+        vSeeds.push_back(CDNSSeedData("37.120.190.76", "37.120.190.76"));//East Coast
 		vSeeds.push_back(CDNSSeedData("46.105.114.185", "46.105.114.185"));
 		vSeeds.push_back(CDNSSeedData("144.76.238.2", "144.76.238.2"));
 		vSeeds.push_back(CDNSSeedData("104.172.24.79", "104.172.24.79"));
