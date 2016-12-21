@@ -43,3 +43,76 @@ user@machine:~$ make install
 # ... or you can copy thse binaries to the folder of your choice
 # Have fun and (maybe) show some appreciation (EJZwagsubfxn1xeB4JmztAWitgTPty3FzN).
 # User:https://bitcointalk.org/index.php?action=profile;u=356883
+
+
+### Notes
+
+##### Fetching and compiling the source (assumes you have all the dependencies):
+
+cd
+git clone https://github.com/LIMXTEC/Europecoin-V3.git Europecoin-V3src/
+cd Europecoin-V3src/
+chmod -Rc +x ./*.sh
+chmod -Rc +x ./*/*.sh
+chmod -Rc +x ./*/*/*.sh
+chmod -Rc +x ./*/*/build_detect_platform
+./autogen.sh
+./configure
+make
+make install
+
+### *the last line is optional, and may need to be ran with root privs by running 'sudo make install'
+
+#### Running the compiled binaries:
+## if you **DID NOT** do the last optional compile step, then after compilation finishes, and from the same directory that the compilation steps were done in:
+
+./src/europecoind             (starts the headless daemon)
+./src/europecoin-cli          (CLI program to issue RPC commands like 'getinfo', 'stop', etc)
+./src/qt/europecoin-qt        (starts the QT GUI wallet)
+
+
+if you **DID** do the last optional compile step (make install), then you can use the following terminal commands from any directory:
+
+europecoind                   (starts the headless daemon)
+europecoin-cli                (CLI program to issue RPC commands like 'getinfo', 'stop', etc)
+europecoin-qt                 (starts the QT GUI wallet)
+
+
+
+## Setting up the conf file:
+You can access/create/edit the conf file from the terminal using the following commands:
+
+cd ~/.europecoin/
+vi europecoin.conf
+
+*If you don't like vi, you can use nano instead (may be easier for first-time users): 'nano europecoin.conf'
+
+## Minimum recommended entries for the conf file are as follows:
+
+rpcuser=xxx
+rpcpassword=xxx
+daemon=1
+server=1
+listen=1
+
+*replace the strings of 'xxx' with whatever you desire
+
+
+
+
+
+
+### BONUS - Download the pre-compiled linux 64-bit binaries:
+If all else fails, and you would rather just download the pre-compiled binaries, follow the following steps
+
+wget https://github.com/LIMXTEC/Europecoin-V3/releases/download/Europecoin_V3.0.1.0.1/Europecoin-Linux64.zip
+unzip Europecoin-Linux64.zip
+cp europecoin* /usr/local/bin/
+
+*if the last step fails with a permission error, instead run 'sudo cp europecoin* /usr/local/bin/
+
+Then, to run:
+
+europecoind                   (starts the headless daemon)
+europecoin-cli                (CLI program to issue RPC commands like 'getinfo', 'stop', etc)
+europecoin-qt                 (starts the QT GUI wallet)
