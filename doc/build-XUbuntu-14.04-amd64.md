@@ -1,4 +1,4 @@
-# prepare your environment (if necessary)
+## Prepare your environment (if necessary)
 # as per requirements and dependencies specifications in doc/build-unix.md
 # for basic (daemon) building 
 user@machine:~$ sudo apt-get install build-essential libtool autotools-dev autoconf pkg-config libssl-dev
