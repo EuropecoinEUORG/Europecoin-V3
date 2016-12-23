@@ -82,6 +82,11 @@ unsigned int static DUAL_KGW3(const CBlockIndex* pindexLast, const Consensus::Pa
 	int64_t nActualTimespanshort = nActualTime1;	
 	
 	// Retarget BTC Original ...not exactly
+	// Small Fix
+	if (BlockReading->nHeight > 60000)
+	{
+	if(nActualTime1 < 0) nActualTime1 = Blocktime;
+	}
 
     if (nActualTime1 < Blocktime / 3)
         nActualTime1 = Blocktime / 3;
