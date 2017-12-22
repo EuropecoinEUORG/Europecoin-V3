@@ -75,6 +75,12 @@ For Ubuntu 12.04 and later or Debian 7 and later libboost-all-dev has to be inst
 For other Debian & Ubuntu (with ppa):
 
 	sudo apt-get install libdb4.8-dev libdb4.8++-dev
+	
+OTHER OPTION:
+if you have problems with the options above, you can install Berkley DB, using this installation script:
+
+	https://github.com/tinybike/get-bdb-4.8
+	
 
 Optional:
 
