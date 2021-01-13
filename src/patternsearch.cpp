@@ -83,13 +83,13 @@ namespace patternsearch
 				//AES CBC encrypt data in cache 2, place it into cache 1, ready for the next round
 				//AES_cbc_encrypt((unsigned char*)&cacheMemoryOperatingData2[0], (unsigned char*)&cacheMemoryOperatingData[0], cacheMemorySize, &AESkey, iv, AES_ENCRYPT);
 				if(useEVP){
-					EVP_CIPHER_CTX ctx;
+			EVP_CIPHER_CTX          *ctx = EVP_CIPHER_CTX_new();
 					memcpy(key,(unsigned char*)&cacheMemoryOperatingData2[cacheMemorySize-32],32);
 					memcpy(iv,(unsigned char*)&cacheMemoryOperatingData2[cacheMemorySize-AES_BLOCK_SIZE],AES_BLOCK_SIZE);
-					EVP_EncryptInit(&ctx, EVP_aes_256_cbc(), key, iv);
-					EVP_EncryptUpdate(&ctx, cacheMemoryOperatingData, &outlen1, cacheMemoryOperatingData2, cacheMemorySize);
-					EVP_EncryptFinal(&ctx, cacheMemoryOperatingData + outlen1, &outlen2);
-					EVP_CIPHER_CTX_cleanup(&ctx);
+					EVP_EncryptInit(ctx, EVP_aes_256_cbc(), key, iv);
+					EVP_EncryptUpdate(ctx, cacheMemoryOperatingData, &outlen1, cacheMemoryOperatingData2, cacheMemorySize);
+					EVP_EncryptFinal(ctx, cacheMemoryOperatingData + outlen1, &outlen2);
+					EVP_CIPHER_CTX_cleanup(ctx);
 				}else{
 					AES_KEY AESkey;
 					AES_set_encrypt_key((unsigned char*)&cacheMemoryOperatingData2[cacheMemorySize-32], 256, &AESkey);			
@@ -213,13 +213,13 @@ namespace patternsearch
 			//AES Encrypt using last 256bits as key
 			
 			if(useEVP){
-				EVP_CIPHER_CTX ctx;
+EVP_CIPHER_CTX          *ctx = EVP_CIPHER_CTX_new();
 				memcpy(key,(unsigned char*)&cacheMemoryOperatingData2[cacheMemorySize-32],32);
 				memcpy(iv,(unsigned char*)&cacheMemoryOperatingData2[cacheMemorySize-AES_BLOCK_SIZE],AES_BLOCK_SIZE);
-				EVP_EncryptInit(&ctx, EVP_aes_256_cbc(), key, iv);
-				EVP_EncryptUpdate(&ctx, cacheMemoryOperatingData, &outlen1, cacheMemoryOperatingData2, cacheMemorySize);
-				EVP_EncryptFinal(&ctx, cacheMemoryOperatingData + outlen1, &outlen2);
-				EVP_CIPHER_CTX_cleanup(&ctx);
+				EVP_EncryptInit(ctx, EVP_aes_256_cbc(), key, iv);
+				EVP_EncryptUpdate(ctx, cacheMemoryOperatingData, &outlen1, cacheMemoryOperatingData2, cacheMemorySize);
+				EVP_EncryptFinal(ctx, cacheMemoryOperatingData + outlen1, &outlen2);
+				EVP_CIPHER_CTX_cleanup(ctx);
 			}else{
 				AES_KEY AESkey;
 				AES_set_encrypt_key((unsigned char*)&cacheMemoryOperatingData2[cacheMemorySize-32], 256, &AESkey);			
